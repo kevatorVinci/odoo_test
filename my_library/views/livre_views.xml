@@ -71,7 +71,6 @@
                             <field name="price" />
                             <field name="stock_quantity" />
                             <field name="active" />
-                            <field name="state"/>
                         </group>
                     </group>
 
