@@ -1,0 +1,27 @@
+<odoo>
+
+    <record id="demo_livre_harry_potter" model="my.library.livre">
+        <field name="name">Harry Potter à l'école des sorciers</field>
+        <field name="author">J. K. Rowling</field>
+        <field name="publication_date">1997-06-26</field>
+        <field name="isbn">9782070542127</field>
+        <field name="description">Roman fantastique pour enfants et adultes.</field>
+        <field name="price">12.50</field>
+        <field name="stock_quantity">10</field>
+        <field name="active">True</field>
+        <field name="language">fr</field>
+    </record>
+
+    <record id="demo_livre_petit_prince" model="my.library.livre">
+        <field name="name">Le Petit Prince</field>
+        <field name="author">Antoine de Saint-Exupéry</field>
+        <field name="publication_date">1943-04-06</field>
+        <field name="isbn">9782070413110</field>
+        <field name="description">Conte philosophique et poétique.</field>
+        <field name="price">8.90</field>
+        <field name="stock_quantity">25</field>
+        <field name="active">True</field>
+        <field name="language">fr</field>
+    </record>
+
+</odoo>
