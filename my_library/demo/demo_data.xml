@@ -1,11 +1,38 @@
 <odoo>
 
+    <!-- ==================== CATEGORIES DE DEMO ==================== -->
+    <record id="demo_category_roman" model="my.library.categorie">
+        <field name="name">Roman</field>
+    </record>
+
+    <record id="demo_category_fantasy" model="my.library.categorie">
+        <field name="name">Fantasy &amp; Fantastique</field>
+    </record>
+
+    <record id="demo_category_sf" model="my.library.categorie">
+        <field name="name">Science-Fiction</field>
+    </record>
+
+    <record id="demo_category_policier" model="my.library.categorie">
+        <field name="name">Policier &amp; Thriller</field>
+    </record>
+
+    <record id="demo_category_jeunesse" model="my.library.categorie">
+        <field name="name">Jeunesse</field>
+    </record>
+
+    <record id="demo_category_manga" model="my.library.categorie">
+        <field name="name">Manga &amp; BD</field>
+    </record>
+
+    <!-- ==================== LIVRES DE DEMO ==================== -->
     <record id="demo_livre_harry_potter" model="my_library.livre">
         <field name="name">Harry Potter à l'école des sorciers</field>
         <field name="author">J. K. Rowling</field>
+        <field name="category_id" ref="demo_category_fantasy"/>
         <field name="publication_date">1997-06-26</field>
         <field name="isbn">9782070542127</field>
-        <field name="description">Roman fantastique pour enfants et adultes.</field>
+        <field name="description">Premier tome des aventures du jeune sorcier Harry Potter à Poudlard.</field>
         <field name="price">12.50</field>
         <field name="stock_quantity">10</field>
         <field name="active">True</field>
@@ -15,11 +42,90 @@
     <record id="demo_livre_petit_prince" model="my_library.livre">
         <field name="name">Le Petit Prince</field>
         <field name="author">Antoine de Saint-Exupéry</field>
+        <field name="category_id" ref="demo_category_jeunesse"/>
         <field name="publication_date">1943-04-06</field>
         <field name="isbn">9782070413110</field>
-        <field name="description">Conte philosophique et poétique.</field>
+        <field name="description">Conte philosophique et poétique sur l'amitié, l'amour et l'enfance.</field>
         <field name="price">8.90</field>
         <field name="stock_quantity">25</field>
+        <field name="active">True</field>
+        <field name="language">fr</field>
+    </record>
+
+    <record id="demo_livre_1984" model="my_library.livre">
+        <field name="name">1984</field>
+        <field name="author">George Orwell</field>
+        <field name="category_id" ref="demo_category_sf"/>
+        <field name="publication_date">1949-06-08</field>
+        <field name="isbn">9782070368228</field>
+        <field name="description">Un classique de la dystopie décrivant une société sous surveillance totale.</field>
+        <field name="price">9.20</field>
+        <field name="stock_quantity">18</field>
+        <field name="active">True</field>
+        <field name="language">fr</field>
+    </record>
+
+    <record id="demo_livre_dune" model="my_library.livre">
+        <field name="name">Dune</field>
+        <field name="author">Frank Herbert</field>
+        <field name="category_id" ref="demo_category_sf"/>
+        <field name="publication_date">1965-08-01</field>
+        <field name="isbn">9782266320481</field>
+        <field name="description">Épopée magistrale sur la planète aride Arrakis et la lutte pour l'Épice.</field>
+        <field name="price">14.90</field>
+        <field name="stock_quantity">12</field>
+        <field name="active">True</field>
+        <field name="language">fr</field>
+    </record>
+
+    <record id="demo_livre_seigneur_anneaux" model="my_library.livre">
+        <field name="name">Le Seigneur des Anneaux : La Fraternité de l'Anneau</field>
+        <field name="author">J. R. R. Tolkien</field>
+        <field name="category_id" ref="demo_category_fantasy"/>
+        <field name="publication_date">1954-07-29</field>
+        <field name="isbn">9782267027006</field>
+        <field name="description">La quête de Frodon pour détruire l'Anneau unique en Terre du Milieu.</field>
+        <field name="price">15.50</field>
+        <field name="stock_quantity">8</field>
+        <field name="active">True</field>
+        <field name="language">fr</field>
+    </record>
+
+    <record id="demo_livre_sherlock_holmes" model="my_library.livre">
+        <field name="name">Une étude en rouge</field>
+        <field name="author">Arthur Conan Doyle</field>
+        <field name="category_id" ref="demo_category_policier"/>
+        <field name="publication_date">1887-11-01</field>
+        <field name="isbn">9782253006329</field>
+        <field name="description">La toute première enquête de Sherlock Holmes et du docteur Watson.</field>
+        <field name="price">6.50</field>
+        <field name="stock_quantity">15</field>
+        <field name="active">True</field>
+        <field name="language">fr</field>
+    </record>
+
+    <record id="demo_livre_etranger" model="my_library.livre">
+        <field name="name">L'Étranger</field>
+        <field name="author">Albert Camus</field>
+        <field name="category_id" ref="demo_category_roman"/>
+        <field name="publication_date">1942-05-19</field>
+        <field name="isbn">9782070360024</field>
+        <field name="description">Chef-d'œuvre de la littérature sur l'absurdité de l'existence.</field>
+        <field name="price">7.80</field>
+        <field name="stock_quantity">20</field>
+        <field name="active">True</field>
+        <field name="language">fr</field>
+    </record>
+
+    <record id="demo_livre_one_piece" model="my_library.livre">
+        <field name="name">One Piece - Tome 1 : Romance Dawn</field>
+        <field name="author">Eiichiro Oda</field>
+        <field name="category_id" ref="demo_category_manga"/>
+        <field name="publication_date">1997-12-24</field>
+        <field name="isbn">9782723488525</field>
+        <field name="description">Luffy prend la mer à la recherche du trésor légendaire, le One Piece.</field>
+        <field name="price">6.99</field>
+        <field name="stock_quantity">30</field>
         <field name="active">True</field>
         <field name="language">fr</field>
     </record>

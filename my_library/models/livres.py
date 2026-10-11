@@ -55,6 +55,12 @@ class Livre(models.Model):
         default="fr",
     )
 
+    category_id = fields.Many2one(
+        comodel_name="my.library.categorie",
+        string="Category",
+        ondelete="set null",
+    )
+    
     @api.constrains("isbn")
     def _check_isbn(self):
         for livre in self:
