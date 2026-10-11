@@ -5,7 +5,7 @@
     "depends": ["base"],
     "data": [
         "security/ir.model.access.csv",
-        "views/produit_views.xml",
+        "views/livre_views.xml",
     ],
     "installable": True,
     "application": True,
