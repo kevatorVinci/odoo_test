@@ -60,7 +60,24 @@ class Livre(models.Model):
         string="Category",
         ondelete="set null",
     )
-    
+
+    cover_image = fields.Image(
+        string="Cover",
+        max_width=1024,
+        max_height=1024,
+    )
+
+    state = fields.Selection(
+        selection=[
+            ("available", "Available"),
+            ("sold", "Sold"),
+            ("lost", "Lost"),
+        ],
+        string="State",
+        default="available",
+        required=True,
+    )
+
     @api.constrains("isbn")
     def _check_isbn(self):
         for livre in self:
@@ -82,3 +99,17 @@ class Livre(models.Model):
     def action_remove_from_sale(self):
         for livre in self:
             livre.active = False
+
+    def action_mark_sold(self):
+        for livre in self:
+            livre.state = "sold"
+
+
+    def action_mark_lost(self):
+        for livre in self:
+         livre.state = "lost"
+
+
+    def action_mark_available(self):
+        for livre in self:
+            livre.state = "available"
