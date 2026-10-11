@@ -6,6 +6,7 @@
     "data": [
         "security/ir.model.access.csv",
         "views/livre_views.xml",
+        "demo/demo_data.xml",
     ],
     "demo": [
         "demo/demo_data.xml",

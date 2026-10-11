@@ -1,6 +1,6 @@
 <odoo>
 
-    <record id="demo_livre_harry_potter" model="my.library.livre">
+    <record id="demo_livre_harry_potter" model="my_library.livre">
         <field name="name">Harry Potter à l'école des sorciers</field>
         <field name="author">J. K. Rowling</field>
         <field name="publication_date">1997-06-26</field>
@@ -12,7 +12,7 @@
         <field name="language">fr</field>
     </record>
 
-    <record id="demo_livre_petit_prince" model="my.library.livre">
+    <record id="demo_livre_petit_prince" model="my_library.livre">
         <field name="name">Le Petit Prince</field>
         <field name="author">Antoine de Saint-Exupéry</field>
         <field name="publication_date">1943-04-06</field>
