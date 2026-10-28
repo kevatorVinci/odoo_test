@@ -78,6 +78,11 @@ class Livre(models.Model):
         required=True,
     )
 
+    page_count = fields.Integer(
+        string='Nombre de pages',
+        default=0,
+    )
+
     @api.constrains("isbn")
     def _check_isbn(self):
         for livre in self:

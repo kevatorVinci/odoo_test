@@ -1,3 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_my_library_livre_employe,my.library.perms.employe,model_my_library_livre,base.group_user,1,1,1,1
 access_my_library_categorie_user,my.library.categorie.user,model_my_library_categorie,base.group_user,1,1,1,1
+access_my_library_reading_progress,my.library.reading.progress,model_my_library_reading_progress,base.group_user,1,0,0,0

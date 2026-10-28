@@ -64,6 +64,7 @@
                             <field name="category_id" />
                             <field name="publication_date" />
                             <field name="isbn" />
+                            <field name="page_count" />
                             <field name="language" />
                         </group>
 
@@ -95,6 +96,8 @@
 
                 <!-- Filtres rapides -->
                 <filter string="En vente" name="active_books" domain="[('active', '=', True)]" />
+                <filter string="Non en vente" name="inactive_books"
+                    domain="[('active', '=', False)]" />
 
                 <!-- Regroupements -->
                 <group expand="0" string="Regrouper par">
