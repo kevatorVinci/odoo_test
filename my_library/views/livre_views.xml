@@ -43,6 +43,11 @@
                         string="Put back on sale"
                         class="btn-success"
                         invisible="state == 'available'" />
+                    <button
+                        name="action_open_reading_progress_wizard"
+                        type="object"
+                        string="Enregistrer ma progression"
+                        class="btn-primary" />
 
                     <field
                         name="state"

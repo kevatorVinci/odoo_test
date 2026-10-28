@@ -118,3 +118,18 @@ class Livre(models.Model):
     def action_mark_available(self):
         for livre in self:
             livre.state = "available"
+
+    def action_open_reading_progress_wizard(self):
+        self.ensure_one()
+
+        return {
+            "type": "ir.actions.act_window",
+            "name": "Enregistrer ma progression",
+            "res_model": "my_library.reading.progress.wizard",
+            "view_mode": "form",
+            "target": "new",
+            "context": {
+                **self.env.context,
+                "default_book_id": self.id,
+            },
+        }
